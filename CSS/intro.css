@@ -38,6 +38,6 @@
 /* Responsif */
 @media (min-height: 600px) {
     .intro-base .txt-hallo {
-        font-size: 60px;
+        font-size: 20px;
     }
 }
