@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/./img/./Neroo1.png">
+    <link rel="stylesheet" href="./CSS/./cover.css">
+    <link rel="stylesheet" href="./CSS/./intro.css">
+    <link rel="stylesheet" href="./CSS/./home.css">
+    <!-- CDN Font awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@r3dz0n3/fontawesome-pro@6.3.0/css/all.min.css">
+    <title>Neroo - universe | Welcome</title>
+</head>
+
+<body>
+
+    <!-- === COVER PAGE === -->
+    <section class="cvr-base" id="cvrPage">
+        <!-- < particles background /> -->
+        <div class="particles" id="particles"></div>
+
+        <!-- < content /> -->
+        <div class="cvr-content">
+            <!-- title -->
+            <div class="title" id="cvrSetFadeOut1">
+                <h1 class="welcome-txt">Welcome</h1>
+                <div class="eff-underglow"></div>
+            </div>
+
+            <!-- button -->
+            <button class="cvr-btn" id="cvrExBtn">
+                <span>Explore</span>
+                <i class="fa-solid fa-planet-ringed"></i>
+                <audio src="./assets/./audio/./i'l do it.mp3" id="introMusic1" controls hidden loop></audio>
+            </button>
+
+            <!-- tagline -->
+            <div class="cvr-tagline" id="cvrSetFadeOut2">
+                EXPLORE THE EXPERIENCE
+            </div>
+        </div>
+
+    </section>
+    <!-- === /COVER PAGE === -->
+
+    <!-- === INTRO PAGE === -->
+    <section class="intro-trns" id="introPage">
+        <div class="intro-base" id="introBase">
+
+            <!-- < logo  animation /> -->
+            <video src=""></video>
+
+            <!-- < text /> -->
+            <h1 class="txt-hallo" id="txtHallo">Hallo</h1>
+        </div>
+    </section>
+    <!-- === /INTRO PAGE === -->
+
+    <!-- === HOME PAGE === -->
+    <section class="home-page" id="homePage">
+        <div class="hm-base">
+
+            <!-- < Main />  -->
+            <div class="hm-main">
+                <!-- holow bg -->
+                <video src="./assets/./video/./Holosphere.mp4" autoplay loop muted></video>
+
+                <!-- social media -->
+                <div class="social-media">
+                    <div class="ul">
+                        <div class="logo"><img src="./assets/./img/./Neroo1.png" alt="logo"></div>
+                        <div class="line-warp">
+                            <span class="dot top"></span>
+                            <span class="line"></span>
+                            <span class="dot bottom"></span>
+                        </div>
+                        <div><i class="fa-brands fa-instagram fa-2xl"></i></div>
+                        <div><i class="fa-brands fa-github fa-2xl"></i></div>
+                        <div><i class="fa-brands fa-whatsapp fa-2xl"></i></div>
+                    </div>
+                </div>
+                    
+                <!-- nav -->
+                <nav class="main-nav">
+                    <ul>
+                        <div class="list-left">
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Project</li>
+                        </div>
+                        <div class="list-right">
+                            <li>Contact</li>
+                            <li><i class="fa-solid fa-arrow-down fa-rotate-by" style="--fa-rotate-angle: 245deg;"></i></li>
+                        </div>
+                    </ul>
+                </nav>
+
+                <!-- txt content -->
+                <div class="main-text">
+                    <span>Hi, i'm Alif</span>
+                    <h1>Neroo Universe <br> Front-end Developer</h1>
+                </div>
+                <div class="main-tagline">
+                    <span>Scroll down ↓ </span>
+                </div>
+            </div>
+
+            <!-- < description /> -->
+            <div class="hm-desc">
+                <!-- curved bg -->
+                <svg viewBox="0 0 1440 200" class="curve">
+                    <path id="wave" fill="#ebebeb" d="MO,O L1440,0 L1440,200 L0,200 Z"></path>
+                </svg>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- === /HOME PAGE === -->
+
+</body>
+<script src="./JS/./cover.js"></script>
+<script src="./JS/./intro.js"></script>
+<script src="./JS/./home.js"></script>
+
+</html>
