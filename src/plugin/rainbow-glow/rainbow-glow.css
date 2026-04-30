@@ -1,0 +1,23 @@
+.rainbow-glow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  width: 90%;
+  height: 18px;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    indigo,
+    violet);
+  filter: blur(10px);
+  border-radius: 50px;
+  opacity: 0.9;
+  z-index: -1; /* glow di belakang tombol */                                                                         }
+}
