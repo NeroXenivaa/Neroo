@@ -9,7 +9,7 @@ let rows = [];
 let globalFade = 0;
 
 const img = new Image();
-img.src = ".../assets/./img/./halftone.png";
+img.src = "./halftone.png";
 
 img.onload = () => {
     init();
