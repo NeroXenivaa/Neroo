@@ -1,3 +1,4 @@
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -8,7 +9,7 @@ let rows = [];
 let globalFade = 0;
 
 const img = new Image();
-img.src = "./assets/img/halftone.img";
+img.src = "./assets/./img/./halftone.png";
 
 img.onload = () => {
     init();
@@ -72,12 +73,12 @@ function animate() {
     if (globalFade < 1) globalFade += 0.01;
     ctx.globalAlpha = globalFade;
 
-    let time = Date.now() * 0.002;
+    let time = Date.now() * 0.0008;
 
     rows.forEach(row => {
 
         let cycle = (time * 0.5 + row.delay) % 2.0;
-        //  1 = masuk, 12 = keluar
+        //  0 1 = masuk, 2 = keluar
 
         let points = row.points;
         let len = points.length;
@@ -89,7 +90,7 @@ function animate() {
             let scale = 0;
             let alpha = 0;
 
-            // NTER (kiri kanan)
+            // ENTER (kiri kanan)
             if (cycle < 1) {
                 let p = cycle;
 
@@ -101,7 +102,7 @@ function animate() {
                 }
             }
 
-            //  EXIT (kiri  kanan juga)
+            // EXIT (kiri kanan juga)
             else {
                 let p = (cycle - 1);
 
