@@ -8,7 +8,7 @@ let rows = [];
 let globalFade = 0;
 
 const img = new Image();
-img.src = "/27a65c5f1de0f53c20a63473b0dc2f7c-removebg-preview.png";
+img.src = "./assets/./img/./halftone.imgo";
 
 img.onload = () => {
     init();
