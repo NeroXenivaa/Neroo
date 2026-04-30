@@ -77,7 +77,7 @@ function animate() {
     rows.forEach(row => {
 
         let cycle = (time * 0.5 + row.delay) % 2.0;
-        // 🔥 0 → 1 = masuk, 1 → 2 = keluar
+        //  1 = masuk, 12 = keluar
 
         let points = row.points;
         let len = points.length;
@@ -89,7 +89,7 @@ function animate() {
             let scale = 0;
             let alpha = 0;
 
-            // 🟢 ENTER (kiri → kanan)
+            // NTER (kiri kanan)
             if (cycle < 1) {
                 let p = cycle;
 
@@ -101,7 +101,7 @@ function animate() {
                 }
             }
 
-            // 🔴 EXIT (kiri → kanan juga)
+            //  EXIT (kiri  kanan juga)
             else {
                 let p = (cycle - 1);
 
