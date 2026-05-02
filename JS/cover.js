@@ -16,7 +16,6 @@ cvrToggleMusic.addEventListener("click", () => {
     if (musicD.paused) {
         musicD.play();
         cvrToggleMusic.classList.remove("fa-music-note");
-        cvrToggleMusic.classList.add("fa-music-note-slash");
     } else {
         musicD.pause();
         cvrToggleMusic.classList.remove("fa-music-note-slash");
