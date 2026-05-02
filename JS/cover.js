@@ -13,7 +13,7 @@ const cvrToggleMusic = document.getElementById("cvrToggleMusic");
 
 cvrToggleMusic.addEventListener("click", () => {
     let musicD = document.getElementById("musicD");
-    cvrToggleMusic.classList.toggle("fa-music-note-slash");
+    cvrToggleMusic.classList.remove("fa-music-note");
     if (musicD.paused) {
         musicD.play();
     } else {
