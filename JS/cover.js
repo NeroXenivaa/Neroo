@@ -3,5 +3,7 @@
 const cvrBtn = document.getElementById("cvrBtn");
 
 cvrBtn.addEventListener("click", () => {
-    cvrBtn.style.background = "red";
+    let introWelcome = document.getElementById("introWelcome");
+    introWelcome.classList.remove("w-0", "h-0");
+    introWelcome.classList.add("w-full", "h-screen");
 })
