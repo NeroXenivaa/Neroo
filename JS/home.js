@@ -1,7 +1,7 @@
 const contacts = document.querySelectorAll(".sticky");
 
 contacts.forEach((contact) => {
-  const bg = contact.querySelector(".bg");
+  const bg = contact.querySelector(".sticky");
 
   contact.addEventListener("mousemove", (e) => {
     const rect = contact.getBoundingClientRect();
