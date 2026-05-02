@@ -31,9 +31,4 @@ function createParticles() {
 // Generate particles on load
 createParticles();
 
-// Adjust particles on window resize
-window.addEventListener('resize', () => {
-    const particlesContainer = document.getElementById('particles');
-    particlesContainer.innerHTML = '';
-    createParticles();
-});
+// Adjust part
