@@ -1,1 +1,5 @@
-console.log("Halo World")
+
+
+function btn(el) {
+    el.style.background = "red";
+}
