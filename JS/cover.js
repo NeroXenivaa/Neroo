@@ -5,7 +5,7 @@ const cvrBtn = document.getElementById("cvrBtn");
 cvrBtn.addEventListener("click", () => {
     let introWelcome = document.getElementById("introWelcome");
     introWelcome.classList.remove("h-0");
-    introWelcome.classList.add("min-h-[100vh]");
+    introWelcome.classList.add("h-[100vh]");
 });
 
 // Button Music Function ()
