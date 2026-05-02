@@ -22,11 +22,6 @@
     img {width: 50px; height: 50px;}
     body {height: 100vh;} body::-webkit-scrollbar {display: none;}
     .center {display: flex; justify-content: center; align-items: center;}
-
-    button { transition: all 300ms;}
-    button:active {
-      transform: scale(1.1);
-    }
   </style>
   
   <!-- === Cover page === -->
@@ -54,7 +49,7 @@
     
     <!-- < button /> -->
     <button class="
-    bg-black rounded-[50px] px-[1.5rem] p-[0.3rem] mt-[1.8rem] 
+    bg-black rounded-[50px] px-[1.5rem] p-[0.3rem] mt-[1.8rem] active:scale-[1.1] transition-transform duration-300 
     center gap-[0.4rem] text-white text-sm lg:text-base relative rainbow-glow" id="cvrBtn"">
       Explore
       <i class="fa-solid fa-planet-ringed"></i>
