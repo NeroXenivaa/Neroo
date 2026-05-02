@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./assets/./img/./Alif-icon.jpg"/>
+  <link rel="icon" href="./assets/./img/./Alif-icon.jpg" />
   <!-- Style's / All Universe Work -->
-  <link rel="stylesheet" href="./plugin/./rainbow-glow/./rainbow-glow.css"/>
-  <link rel="stylesheet" href="./plugin/./sticky-btn/./sticky.css"/>
+  <link rel="stylesheet" href="./plugin/./rainbow-glow/./rainbow-glow.css" />
+  <link rel="stylesheet" href="./plugin/./sticky-btn/./sticky.css" />
   <!-- CDN font awesome -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@r3dz0n3/fontawesome-pro@6.3.0/css/all.css">
   <!-- CDN Tailwind -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Alif Developer | Welcome</title>
 </head>
+
 <body>
   <style>
     *,
@@ -24,14 +26,13 @@
     .center {display: flex; justify-content: center; align-items: center;}
     .cvrBtn {transition: scale 300ms, background 300ms;}
   </style>
-  
+
   <!-- === Cover page === -->
   <section id="coverPage" class="
   w-full h-screen flex-col relative center">
 
     <!-- < Title /> -->
-    <div class="
-    text-center">
+    <div class="text-center">
       <h1 class="
         text-4xl lg:text-6xl font-semibold text-gray-500">
         Digital Silence
@@ -47,22 +48,29 @@
         I design and build websites that bring ideas to life.
       </span>
     </div>
-    
+
     <!-- < button /> -->
     <button class="
     bg-black rounded-[50px] px-[1.5rem] p-[0.3rem] mt-[1.8rem] active:scale-[1.1] active:bg-white  
     center gap-[0.4rem] text-white text-sm lg:text-base relative rainbow-glow cvrBtn" id="cvrBtn"">
       Explore
-      <i class="fa-solid fa-planet-ringed"></i>
+      <i class=" fa-solid fa-planet-ringed"></i>
     </button>
 
     <!-- < toggle music /> -->
-    
+    <audio src="./assets/audio/Lost Soul.mp3" id="musicD" loop controls hidden></audio>
+    <div class="
+    absolute bottom-[1rem] right-[1rem] text-black border-[1px] border-black rounded-[100%] 
+    p-[0.6rem] px-[0.8rem] text-center text-xs active:scale-[1.1] duration-300" 
+    id="cvrToggleMusic">
+      <i class="fa-solid fa-music-note"></i>
+    </div>
+
   </section>
   <!-- === /Cover Page === -->
 
   <!-- === Intro Welcome === -->
-  <div class="absolute top-0 left-0 w-full h-0 overflow-hidden duration-800"
+  <div class="absolute top-0 left-0 w-full h-0 overflow-hidden duration-800" 
   id="introWelcome">
     <div class="bg-black relative w-full h-full center">
       <h1 class="text-white text-2xl font-medium">Halo</h1>
@@ -71,6 +79,6 @@
 
   <!-- Script's / All Universe Work -->
   <script src="./JS/./cover.js"></script>
-  
+
 </body>
 </html>
