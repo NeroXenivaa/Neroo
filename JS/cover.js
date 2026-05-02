@@ -6,4 +6,12 @@ cvrBtn.addEventListener("click", () => {
     let introWelcome = document.getElementById("introWelcome");
     introWelcome.classList.remove("h-0");
     introWelcome.classList.add("h-screen");
+});
+
+// Button Music Function ()
+const cvrToggleMusic = document.getElementById("cvrToggleMusic");
+
+cvrToggleMusic.addEventListener("click", () => {
+    let musicD = document.getElementById("musicD");
+    musicD.play();
 })
