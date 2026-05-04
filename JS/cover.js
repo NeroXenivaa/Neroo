@@ -4,6 +4,7 @@ const cvrBtn = document.getElementById("cvrBtn");
 
 cvrBtn.addEventListener("click", () => {
     let introWelcome = document.getElementById("introWelcome");
+    introWelcome.classList.remove("none");
     introWelcome.classList.remove("h-0");
     introWelcome.classList.add("h-[100vh]");
     // After 4s Page FadeOut
@@ -11,6 +12,10 @@ cvrBtn.addEventListener("click", () => {
         introWelcome.classList.remove("h-[100vh]")
         introWelcome.classList.add("h-0");
     }, 4000);
+    // After 5s page None
+    setTimeout(() => {
+        introWelcome.classList.add("none");
+    }, 5000);
 });
 
 // Button Music Function ()
