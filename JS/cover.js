@@ -21,10 +21,6 @@ cvrBtn.addEventListener("click", () => {
         mainPage.classList.remove("hidden");
         mainPage.classList.add("center", "flex-col");
     }, 3000);
-    // After 6s page None ()
-    setTimeout(() => {
-        introWelcome.classList.add("hidden");
-    }, 6000);
 });
 
 
