@@ -11,10 +11,10 @@ cvrBtn.addEventListener("click", () => {
         introWelcome.classList.remove("h-[100vh]")
         introWelcome.classList.add("h-0");
     }, 4000);
-    // After 5s page None
+    // After 6s page None
     setTimeout(() => {
         introWelcome.classList.add("hidden");
-    }, 5000);
+    }, 6000);
 });
 
 // Button Music Function ()
