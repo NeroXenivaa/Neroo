@@ -15,8 +15,11 @@ cvrBtn.addEventListener("click", () => {
     setTimeout(() => {
         let coverPage = document.getElementById("coverPage");
         let mainPage = document.getElementById("mainPage");
+        coverPage.classList.remove("center", "flex-col");
         coverPage.classList.add("hidden");
+
         mainPage.classList.remove("hidden");
+        mainPage.classList.add("center", "flex-col");
     }, 3000);
     // After 6s page None ()
     setTimeout(() => {
