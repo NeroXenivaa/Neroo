@@ -19,3 +19,12 @@ cvrToggleMusic.addEventListener("click", () => {
         musicD.pause();
     }
 })
+
+// Button function click SFX (Keywoard styles)
+let Sfx1 = document.querySelectorAll(".Sfx1");
+Sfx1.forEach((el) => {
+    el.addEventListener("click", () => {
+        let clickSfx = new Audio("./assets/./audio/./Click.mp3");
+        clickSfx.play();
+    });
+});
