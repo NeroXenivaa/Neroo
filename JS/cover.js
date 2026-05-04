@@ -14,10 +14,10 @@ cvrBtn.addEventListener("click", () => {
     // After 3s Transition ()
     setTimeout(() => {
         let coverPage = document.getElementById("coverPage");
-        let mainPage = document.getElementById("mainPage");
         coverPage.classList.remove("center", "flex-col");
         coverPage.classList.add("hidden");
 
+        let mainPage = document.getElementById("mainPage");
         mainPage.classList.remove("hidden");
         mainPage.classList.add("center", "flex-col");
     }, 3000);
