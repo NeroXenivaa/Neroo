@@ -8,7 +8,6 @@ cvrBtn.addEventListener("click", () => {
     introWelcome.classList.add("h-[100vh]");
     // After 4s Page FadeOut
     setTimeout(() => {
-        introWelcome.classList.remove("h-[100vh]");
         introWelcome.classList.add("h-0");
     }, 4000);
 });
