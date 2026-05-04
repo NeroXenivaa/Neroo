@@ -6,16 +6,24 @@ cvrBtn.addEventListener("click", () => {
     let introWelcome = document.getElementById("introWelcome");
     introWelcome.classList.remove("h-0");
     introWelcome.classList.add("h-[100vh]");
-    // After 4s Page FadeOut
+    // After 4s Page FadeOut ()
     setTimeout(() => {
         introWelcome.classList.remove("h-[100vh]")
         introWelcome.classList.add("h-0");
     }, 4000);
-    // After 6s page None
+    // After 3s Transition ()
+    setTimeout(() => {
+        let coverPage = document.getElementById("coverPage");
+        let mainPage = document.getElementById("mainPage");
+        coverPage.classList.add("hidden");
+        mainPage.classList.remove("hidden");
+    }, 3000);
+    // After 6s page None ()
     setTimeout(() => {
         introWelcome.classList.add("hidden");
     }, 6000);
 });
+
 
 // Button Music Function ()
 const cvrToggleMusic = document.getElementById("cvrToggleMusic");
@@ -28,6 +36,7 @@ cvrToggleMusic.addEventListener("click", () => {
         musicD.pause();
     }
 })
+
 
 // Button function click SFX (Keywoard styles) #Sfx1 Class
 let Sfx1 = document.querySelectorAll(".Sfx1");
