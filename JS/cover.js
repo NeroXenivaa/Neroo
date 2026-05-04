@@ -20,7 +20,7 @@ cvrToggleMusic.addEventListener("click", () => {
     }
 })
 
-// Button function click SFX (Keywoard styles)
+// Button function click SFX (Keywoard styles) #Sfx1 Class
 let Sfx1 = document.querySelectorAll(".Sfx1");
 Sfx1.forEach((el) => {
     el.addEventListener("click", () => {
