@@ -19,7 +19,6 @@ cvrBtn.addEventListener("click", () => {
 
         let mainPage = document.getElementById("mainPage");
         mainPage.classList.remove("hidden");
-        mainPage.classList.add("center", "flex-col");
     }, 3000);
     // After 6s IntroWelcome None
     setTimeout(() => {
