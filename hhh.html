@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/./img/./Neroo1.png">
+    <!-- CDN Font awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@r3dz0n3/fontawesome-pro@6.3.0/css/all.min.css">
+    <title>Neroo - universe | Welcome</title>
+</head>
+
+<body>
+  
+  <style>
+    /* < BEHAVIOUR /> */
+*,
+html {
+    padding: 0; margin: 0;
+    font-family: sans-serif; text-decoration: none; list-style: none;
+    box-sizing: border-box;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+img {
+    width: 50px; height: 50px;
+}
+body {
+    height: min-content;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===================
+    < COVER STYLE > 
+====================== */
+/* base style */
+.cvr-base {
+    background: radial-gradient(circle at 20% 30%, #0a0a0a, #000000);
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    cursor: default;
+}
+/* animate gradient background */
+.cvr-base::before  {
+    content: '';
+    background: radial-gradient(circle at 70% 80%, rgba(50, 0, 80, 0.3), transparent 70%);
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    pointer-events: none;
+    /* animation subtlePulse */
+    animation: subtlePulse 8s ease-in-out infinite;
+}
+/* floating particle background */
+.particles {
+    width: 100%; height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+.particle {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    animation: float linear infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-20vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* content style */
+.cvr-content {
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+    /* animation fadeInUp */
+    animation: fadeInUp 1.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+/* title */
+.cvr-content .title {
+    position: relative;
+    margin-bottom: 3rem;
+    animation: fadeInUp 1.2s 0.9s backwards;
+}
+.cvr-content .title.fadeOut {
+    opacity: 0;
+    /* animation fadeOut */
+    animation: fadeOutUp 1.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+.cvr-content .title .welcome-txt {
+    background: linear-gradient(
+        135deg, 
+        #fff 0%, 
+        #a0a0ff 40%, 
+        #c084fc 70%, 
+        #fff 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 30px rgba(192, 132, 252, 0.3);
+    position: relative;
+    display: inline-block;
+    animation: shimmer 5s linear infinite, glowPulse 3s ease-in-out infinite;
+}
+/* glowing underline text */
+.cvr-content .title .welcome-txt::after {
+    content: '';
+    background: linear-gradient(
+        90deg, 
+        transparent, 
+        #c084fc, 
+        #a855f7, 
+        #c084fc, 
+        transparent
+    );
+    border-radius: 4px;
+    width: 60%; height: 3px;
+    position: absolute;
+    bottom: -12px; left: 50%;
+    transform: translateX(-50%);
+    animation: lineWidth 2s ease-in-out infinite;
+}
+/* effet glow */
+.cvr-content .title .eff-underglow {
+    background: radial-gradient(
+        circle, 
+        rgba(139, 92, 246, 0.2), 
+        transparent 70%
+    );
+    border-radius: 50%;
+    width: 300px; height: 300px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(60px);
+    animation: orbRotate 12s infinite alternate;
+    z-index: -1;
+}
+/* button style */
+.cvr-btn {
+    background: linear-gradient(
+        1135deg, 
+        rgba(20, 20, 30, 0.9), 
+        rgba(10, 10, 15, 0.95)
+    );
+    border-radius: 60px;
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 0px rgba(139, 92, 246, 0);
+    color: #f0f0f0;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.8rem; gap: 12px;
+    cursor: pointer;
+    animation: fadeInUp 1.2s 1.5s backwards;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    overflow: hidden;
+    z-index: 2;
+}
+.cvr-btn.fadeOut {
+    opacity: 0;
+    /* animation fadeOut */
+    animation: fadeOutUp 1.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+/* inner glow effect */
+.cvr-btn::before {
+    content: '';
+    background: linear-gradient(
+        90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent
+    );
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: -100%;
+    transition: left 0.6s ease;
+    z-index: -1;
+}
+/* hover effect */
+.cvr-btn:hover {
+    background: linear-gradient(
+        135deg, 
+        rgba(30, 30, 45, 0.95), 
+        rgba(20, 20, 35, 0.98)
+    );
+    border-color: rgba(192, 132, 252, 0.9);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4), 0 0 15px rgba(192, 132, 252, 0.5);
+    color: #fff;
+    letter-spacing: 2px;
+    transform: scale(1.05);
+}
+.cvr-btn:hover::before {
+    left: 100%;
+}
+/* click effect */
+.cvr-btn:active {
+    transform: scale(0.98);
+    transition: 0.05s;
+
+}
+
+/* footer */
+.cvr-tagline {
+    color: rgba(180, 180, 220, 0.5);
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    animation: fadeInUp 1.2s 2s backwards;
+}
+.cvr-tagline.fadeOut {
+    opacity: 0;
+    /* animation fadeOut */
+    animation: fadeOutUp 1.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+/* animations */
+@keyframes subtlePulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+}
+@keyframes lineWidth {
+    0%, 100% {
+        width: 40%;
+        opacity: 0.6;
+    }
+    50% {
+        width: 80%;
+        opacity: 1;
+    }
+}
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(192, 132, 252, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(192, 132, 252, 0.6);
+    }
+}
+@keyframes orbRotate {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.4) rotate(5deg);
+        opacity: 0.8;
+    }
+}
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+@media (max-width: 640px) {
+    .cvr-btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    .cvr-content {
+        padding: 1.5rem;
+    }
+    .cvr-content .title .eff-underglow {
+        width: 200px; height: 200px;
+        filter: blur(40px);
+    }
+}
+
+/* =========================
+    < TRANSITION STYLE /> 
+============================ */
+/* transition explore page */
+.intro-trns {
+    width: 100%; height: 0;
+    position: fixed;
+    top: 0; left: 0;
+    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-delay: 2s;
+    overflow: hidden;
+    z-index: 5;
+}
+.intro-trns.Active {
+    height: 100vh;
+}
+/* intro base */
+.intro-base {
+    background: #fff;
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: center; align-items: center;
+    position: relative;
+    transition: all 1s cubic-bezier(0.65, 0, 0.35, 1);
+    overflow: hidden;
+}
+.intro-base.fadeOut {
+    height: 0;
+}
+/* text Hallo */
+.intro-base .txt-hallo {
+    color: #000;
+    position: absolute;
+    opacity: 0;
+    transition: all 300ms;
+}
+
+/* Responsif */
+@media (min-height: 600px) {
+    .intro-base .txt-hallo {
+        font-size: 60px;
+    }
+}
+/* ===============
+    HOME STYLE 
+================== */
+/* home base/root */
+.home-page {
+    /* ubah height jika ingin menambahkan content */
+    width: 100%; height: 300vh;
+    display: none;
+    position: absolute;
+    top: 0; left: 0;
+}
+.hm-base {
+    width: 100%; height: 100%;
+    position: relative;
+}
+
+/* main style */
+.hm-main {
+    width: 100%; height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center; align-items: center;
+}
+.hm-main video {
+    background: #ebebeb;
+    /* atur ukuran hollow */
+    width: 100%; height: 100%;
+    position: relative;
+    top: 0; left: 0;
+    z-index: -1;
+}
+.social-media {
+    width: max-content; height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+}
+.social-media .ul {
+    position: relative;
+    display: flex; flex-direction: column;
+    align-items: center;
+    padding: 1rem; gap: 2rem;
+}
+.line-wrap {
+    position: absolute;
+}
+.line {
+    display: block;
+    width: 1px; height: 320px;
+    background: #000;
+    margin: 10px auto;
+}
+.dot {
+    width: 6px; height: 6px;
+    background: #000;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+.main-text {
+    position: absolute;
+    display: flex; flex-direction: column;
+    text-align: center;
+}
+.main-text h1 {
+    font-weight: 100;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+.main-tagline {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2rem;
+}
+.main-nav {
+    width: 100%; height: max-content;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+}
+.main-nav ul {
+    display: flex;
+    gap: 1rem;
+}
+.main-nav ul .list-left {
+    display: flex;
+    justify-content: center; align-items: center;
+    gap: 2rem;
+}
+.main-nav ul .list-left li {
+    font-size: 14px;
+}
+.main-nav ul .list-right {
+    display: flex;
+    gap: 0.1rem;
+}
+.main-nav ul .list-right li {
+    background: #000;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 15px;
+    padding: 0.5rem; padding-left: 1rem; padding-right: 1rem;
+}
+
+/* description style */
+.hm-desc {
+    background: #333;
+    width: 100%; height: 200vh;
+    position: relative;
+}
+.hm-desc .curve {
+    background: #333;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+  </style>
+
+    <!-- === COVER PAGE === -->
+    <section class="cvr-base" id="cvrPage">
+        <!-- < particles background /> -->
+        <div class="particles" id="particles"></div>
+
+        <!-- < content /> -->
+        <div class="cvr-content">
+            <!-- title -->
+            <div class="title" id="cvrSetFadeOut1">
+                <h1 class="welcome-txt">Welcome</h1>
+                <div class="eff-underglow"></div>
+            </div>
+
+            <!-- button -->
+            <button class="cvr-btn" id="cvrExBtn">
+                <span>Explore</span>
+                <i class="fa-solid fa-planet-ringed"></i>
+                <audio src="./assets/./audio/./i'l do it.mp3" id="introMusic1" controls hidden loop></audio>
+            </button>
+
+            <!-- tagline -->
+            <div class="cvr-tagline" id="cvrSetFadeOut2">
+                EXPLORE THE EXPERIENCE
+            </div>
+        </div>
+
+    </section>
+    <!-- === /COVER PAGE === -->
+
+    <!-- === INTRO PAGE === -->
+    <section class="intro-trns" id="introPage">
+        <div class="intro-base" id="introBase">
+
+            <!-- < logo  animation /> -->
+
+            <!-- < text /> -->
+            <h1 class="txt-hallo" id="txtHallo">Hallo</h1>
+        </div>
+    </section>
+    <!-- === /INTRO PAGE === -->
+
+    <!-- === HOME PAGE === -->
+    <section class="home-page" id="homePage">
+        <div class="hm-base">
+
+            <!-- < Main />  -->
+            <div class="hm-main">
+                <!-- holow bg -->
+                <video src="./assets/./video/./Holosphere.mp4" autoplay loop muted></video>
+
+                <!-- social media -->
+                <div class="social-media">
+                    <div class="ul">
+                        <div class="logo"><img src="./assets/./img/./Neroo1.png" alt="logo"></div>
+                        <div class="line-warp">
+                            <span class="dot top"></span>
+                            <span class="line"></span>
+                            <span class="dot bottom"></span>
+                        </div>
+                        <div><i class="fa-brands fa-instagram fa-2xl"></i></div>
+                        <div><i class="fa-brands fa-github fa-2xl"></i></div>
+                        <div><i class="fa-brands fa-whatsapp fa-2xl"></i></div>
+                    </div>
+                </div>
+                    
+                <!-- nav -->
+                <nav class="main-nav">
+                    <ul>
+                        <div class="list-left">
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Project</li>
+                        </div>
+                        <div class="list-right">
+                            <li>Contact</li>
+                            <li><i class="fa-solid fa-arrow-down fa-rotate-by" style="--fa-rotate-angle: 245deg;"></i></li>
+                        </div>
+                    </ul>
+                </nav>
+
+                <!-- txt content -->
+                <div class="main-text">
+                    <span>Hi, i'm Alif</span>
+                    <h1>Neroo Universe <br> Front-end Developer</h1>
+                </div>
+                <div class="main-tagline">
+                    <span>Scroll down ↓ </span>
+                </div>
+            </div>
+
+            <!-- < description /> -->
+            <div class="hm-desc">
+                <!-- curved bg -->
+                <svg viewBox="0 0 1440 200" class="curve">
+                    <path id="wave" fill="#ebebeb" d="MO,O L1440,0 L1440,200 L0,200 Z"></path>
+                </svg>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- === /HOME PAGE === -->
+
+</body>
+<script>
+  // < Dynamic floatingg particles >
+function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = window.innerWidth < 768 ? 45 : 85;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        // Random size 8px and 2px
+        const size = Math.random() * 6 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        // Random position horizontal
+        particle.style.left = `${Math.random() * 100}%`
+        // Random animation duration between 6s and 18s
+        const duration = Math.random() * 12 + 6;
+        particle.style.animationDuration = `${duration}s`;
+        // Random delay
+        particle.style.animationDelay = `${Math.random() * 10}s`;
+        // Random opacity variation
+        particle.style.opacity = Math.random() * 0.5 + 0.1;
+        // Random glow color
+        const colors = ['rgba(139, 92, 246, 0.3)', 'rgba(192, 132, 252, 0.2)', 'rgba(255, 255, 255, 0.15)'];
+        particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+        particlesContainer.appendChild(particle);
+    };
+}
+
+// Generate particles on load
+createParticles();
+
+// Adjust particles on window resize
+window.addEventListener('resize', () => {
+    const particlesContainer = document.getElementById('particles');
+    particlesContainer.innerHTML = '';
+    createParticles();
+});
+
+// curved Desc
+window.addEventListener("scroll", () => {
+    let scroll = window.scrollY;
+
+    let curve = document.getElementById("wave");
+
+    let dept = Math.min(scroll *0.2, 150);
+
+    curve.setAttribute(
+        "d",
+        `M0,0 
+            L1440,0 
+            L1440,200 
+            C1000,${200 - dept} 400,${200 - dept} 
+            0,200 
+            Z`
+    );
+});
+
+// Explore Button interect
+const VarCvrExBtn = document.getElementById("cvrExBtn");
+const cvrPage = document.getElementById("cvrPage")
+const introPage = document.getElementById("introPage");
+const VarCvrTitleSetFadeOut = document.getElementById("cvrSetFadeOut1");
+const VarCvrTaglineSetFadeOut = document.getElementById("cvrSetFadeOut2");
+const introMusic1 = document.getElementById("introMusic1")
+
+VarCvrExBtn.addEventListener("click", function () {
+    introPage.classList.add("Active");
+    VarCvrTitleSetFadeOut.classList.add("fadeOut");
+    VarCvrTaglineSetFadeOut.classList.add("fadeOut");
+    VarCvrExBtn.classList.add("fadeOut");
+    // play music
+    introMusic1.play();
+    
+    // set time function
+    setTimeout(() => {
+        cvrPage.style.display = "none";
+    }, 4000);
+
+    // set time by audio
+    function trggrMusic() {
+        const mscTime = introMusic1.currentTime;
+        const introBase = document.getElementById("introBase");
+
+        if (mscTime > 15.5 && mscTime < 15.6) {
+            introBase.classList.add("fadeOut");
+            // change title
+            document.title = "Neroo - universe | Home";
+        }
+        const homePage = document.getElementById("homePage")
+        if (mscTime > 15.5 && mscTime < 15.6) {
+            homePage.style.display = "flex";
+        }
+        if (mscTime > 14 && mscTime < 14.1) {
+            introBase.style.filter = "invert(1)";
+        }
+        const txtHallo = document.getElementById("txtHallo");
+        if (mscTime > 8.5  && mscTime < 8.6) {
+            txtHallo.style.opacity = "1";
+        }
+        if (mscTime > 17 && mscTime < 17.1) {
+            introBase.style.display = "none";
+        }
+        requestAnimationFrame(trggrMusic);
+    }
+    trggrMusic();
+
+    // change title
+    document.title = "Neroo - universe | Intro";
+});
+
+</script>
+
+</html>
