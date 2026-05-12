@@ -1,11 +1,9 @@
 
 
-// curved Desc
+// curved Desc ()
 window.addEventListener("scroll", () => {
     let scroll = window.scrollY;
-
     let curve = document.getElementById("wave");
-
     let dept = Math.min(scroll *0.2, 150);
 
     curve.setAttribute(
@@ -17,4 +15,14 @@ window.addEventListener("scroll", () => {
             0,200 
             Z`
     );
+});
+
+// Function Nav scroll event () =>
+window.addEventListener("scroll", () => {
+    let nav = document.getElementById("nav");
+    if (window.scrollY > 200) {
+        nav.classList.add("hidden");
+    } else {
+        nav.classList.remove("hidden");
+    }
 });
