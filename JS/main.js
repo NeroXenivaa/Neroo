@@ -19,10 +19,10 @@ window.addEventListener("scroll", () => {
 
 // Function Nav scroll event () =>
 window.addEventListener("scroll", () => {
-    let nav = document.getElementById("nav");
+    let navW = document.getElementById("navW");
     if (window.scrollY > 200) {
-        nav.classList.add("hidden");
+        navW.classList.add("translate-y-[25px]");
     } else {
-        nav.classList.remove("hidden");
+        navW.classList.remove("hidden");
     }
 });
