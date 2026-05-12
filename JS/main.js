@@ -25,10 +25,4 @@ window.addEventListener("scroll", () => {
     } else {
         navW.classList.remove("translate-y-[-25px]", "opacity-[0]");
     }
-    // $$ Optimize $$
-    if (window.scrollY > 400) {
-        navW.classList.add("hidden");
-    } else {
-        navW.classList.remove("hidden");
-    }
 });
