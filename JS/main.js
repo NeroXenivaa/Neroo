@@ -21,7 +21,7 @@ window.addEventListener("scroll", () => {
 window.addEventListener("scroll", () => {
     let navW = document.getElementById("navW");
     if (window.scrollY > 200) {
-        navW.classList.add("translate-y-[25px]");
+        navW.classList.add("translate-y-[-25px]");
     } else {
         navW.classList.remove("hidden");
     }
