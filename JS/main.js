@@ -23,13 +23,7 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
         // Hide Transition
         navW.classList.add("translate-y-[-25px]", "opacity-0");
-        navW.querySelectorAll("Sfx1").forEach((el) => {
-            el.classList.remove("Sfx1");
-        });
     } else {
         navW.classList.remove("translate-y-[-25px]", "opacity-0");
-        navW.querySelectorAll("Sfx1").forEach((el) => {
-            el.classList.add("Sfx1");
-        });
     }
 });
