@@ -23,15 +23,7 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
         // Hide Transition
         navW.classList.add("translate-y-[-25px]", "opacity-0");
-        // $$ Optimizeed
-        navW.addEventListener("transitionend", function handler() {
-            if (navW.classList.contains("opacity-0")) {
-                navW.classList.add("hidden");
-            }
-        });
     } else {
-        navW.classList.add("opacity-0");
-        navW.classList.remove("hidden")
         navW.classList.remove("translate-y-[-25px]", "opacity-0");
     }
 });
