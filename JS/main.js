@@ -21,12 +21,20 @@ window.addEventListener("scroll", () => {
 window.addEventListener("scroll", () => {
     let navW = document.getElementById("navW");
     if (window.scrollY > 200) {
+        // Hide Transition
         navW.classList.add("translate-y-[-25px]", "opacity-[0]");
-
-        navW.addEventListener("transitioned", () => {
-            
-        })
+        // $$ Optimizeed
+        navW.addEventListener("transitioned", function handler() {
+            if (navW.classList.contains("opacity-0")) {
+                navW.classList.add("hidden");
+            }
+            navW.removeEventListener("transitioned", handler);
+        });
     } else {
-        navW.classList.remove("translate-y-[-25px]", "opacity-[0]");
+        navW.classList.remove("hidden");
+
+        requestAnimationFrame(() => {
+            navW.classList.remove("translate-y-[-25px]", "opacity-[0]")
+        });
     }
 });
