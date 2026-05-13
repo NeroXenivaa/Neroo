@@ -4,7 +4,7 @@
 window.addEventListener("scroll", () => {
     let scroll = window.scrollY;
     let curve = document.getElementById("wave");
-    let dept = Math.min(scroll *0.2, 150);
+    let dept = Math.min(scroll * 0.2, 150);
 
     curve.setAttribute(
         "d",
@@ -24,11 +24,11 @@ window.addEventListener("scroll", () => {
         // Hide Transition
         navW.classList.add("translate-y-[-25px]", "opacity-[0]");
         // $$ Optimizeed
-        navW.addEventListener("transitioned", function handler() {
+        navW.addEventListener("transitionend", function handler() {
             if (navW.classList.contains("opacity-0")) {
                 navW.classList.add("hidden");
             }
-            navW.removeEventListener("transitioned", handler);
+            navW.removeEventListener("transitionend", handler);
         });
     } else {
         navW.classList.remove("hidden");
