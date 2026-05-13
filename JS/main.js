@@ -30,6 +30,8 @@ window.addEventListener("scroll", () => {
             }
         });
     } else {
-        navW.classList.remove("translate-y-[-25px]", "opacity-0", "hidden");
+        navW.classList.add("opacity-0");
+        navW.classList.remove("hidden")
+        navW.classList.remove("translate-y-[-25px]", "opacity-0");
     }
 });
