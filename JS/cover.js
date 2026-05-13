@@ -43,7 +43,7 @@ cvrToggleMusic.addEventListener("click", () => {
 // Button function click SFX (Keywoard styles) #Sfx1 Class
 let Sfx1 = document.querySelectorAll(".Sfx1");
 Sfx1.forEach((el) => {
-    el.addEventListener("click", () => {
+    el.addEventListener("mouseenter", () => {
         let clickSfx = new Audio("./assets/./audio/./Click.mp3");
         clickSfx.play();
     });
