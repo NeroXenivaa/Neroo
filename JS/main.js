@@ -32,9 +32,6 @@ window.addEventListener("scroll", () => {
         });
     } else {
         navW.classList.remove("hidden");
-
-        requestAnimationFrame(() => {
-            navW.classList.remove("translate-y-[-25px]", "opacity-[0]")
-        });
+        navW.classList.remove("translate-y-[-25px]", "opacity-[0]");
     }
 });
