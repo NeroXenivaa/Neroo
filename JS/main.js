@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
 // Function Nav scroll event () =>
 window.addEventListener("scroll", () => {
     let navW = document.getElementById("navW");
-    let navR = document.getElementsById("navR");
+    let navR = document.getElementById("navR");
     if (window.scrollY > 200) {
         // Hide Transition
         navW.classList.add("translate-y-[-25px]", "opacity-0");
