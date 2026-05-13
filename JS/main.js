@@ -28,7 +28,6 @@ window.addEventListener("scroll", () => {
             if (navW.classList.contains("opacity-0")) {
                 navW.classList.add("hidden");
             }
-            navW.removeEventListener("transitionend", handler);
         });
     } else {
         navW.classList.remove("hidden");
