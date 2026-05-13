@@ -22,7 +22,7 @@ window.addEventListener("scroll", () => {
     let navW = document.getElementById("navW");
     if (window.scrollY > 200) {
         // Hide Transition
-        navW.classList.add("translate-y-[-25px]", "opacity-[0]");
+        navW.classList.add("translate-y-[-25px]", "opacity-0");
         // $$ Optimizeed
         navW.addEventListener("transitionend", function handler() {
             if (navW.classList.contains("opacity-0")) {
