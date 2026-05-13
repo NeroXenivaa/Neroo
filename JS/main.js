@@ -20,10 +20,13 @@ window.addEventListener("scroll", () => {
 // Function Nav scroll event () =>
 window.addEventListener("scroll", () => {
     let navW = document.getElementById("navW");
+    let navR = document.getElementsById("navR");
     if (window.scrollY > 200) {
         // Hide Transition
         navW.classList.add("translate-y-[-25px]", "opacity-0");
+        navR.classList.remove("translate-y-[-25px]", "opacity-0");
     } else {
         navW.classList.remove("translate-y-[-25px]", "opacity-0");
+        navR.classList.add("translate-y-[-25px]", "opacity-0");
     }
 });
