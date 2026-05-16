@@ -2,12 +2,10 @@
 
 // Function Nav Button Active Event()
 let btnNavR = document.getElementById("btnNavR");
-function NavShow() {
-    btnNavR.addEventListener("click", () => {
-        let mainPage = document.getElementById("mainPage");
-        mainPage.classList.toggle("blur-[6px]");
-    });
-}
+btnNavR.addEventListener("click", () => {
+    let mainPage = document.getElementById("mainPage");
+    mainPage.classList.toggle("blur-[6px]");
+});
 
 // curved Desc ()
 window.addEventListener("scroll", () => {
