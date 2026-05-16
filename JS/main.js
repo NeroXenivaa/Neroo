@@ -3,8 +3,8 @@
 // Function Nav Button Active Event()
 let btnNavR = document.getElementById("btnNavR");
 btnNavR.addEventListener("click", () => {
-    let mainPage = document.getElementById("mainPage");
-    mainPage.classList.toggle("blur-[6px]");
+    let navPage = document.getElementById("navPage");
+    navPage.classList.toggle("blur-[6px]");
 });
 
 // curved Desc ()
