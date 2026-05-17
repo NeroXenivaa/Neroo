@@ -4,7 +4,7 @@
 let btnNavR = document.getElementById("btnNavR");
 btnNavR.addEventListener("click", () => {
     let navPage = document.getElementById("navPage");
-    navPage.classList.toggle("blur-[6px]");
+    navPage.classList.toggle("backdrop-blur-[6px]");
 });
 
 // curved Desc ()
