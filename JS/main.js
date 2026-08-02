@@ -7,7 +7,7 @@ ig.addEventListener("click", () => {
     window.location.href = "https://www.instagram.com/alifarknnbl/";
 });
 wa.addEventListener("click", () => {
-    window.location.href = "wa.me/+62881024474785"
+    window.location.href = "https;//wa.me/+62881024474785"
 })
 
 // Function Nav Button Active Event()
