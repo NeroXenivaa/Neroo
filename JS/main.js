@@ -4,8 +4,8 @@ let gh = document.getElementById("gh");
 let wa = document.getElementById("wa");
 
 ig.addEventListener("click", () => {
-    window.location.href = "https://www.instagram.com/alifarknnbl/";
-})
+    link.href = "https://www.instagram.com/alifarknnbl/";
+});
 
 // Function Nav Button Active Event()
 let btnNavR = document.getElementById("btnNavR");
