@@ -45,5 +45,6 @@ window.addEventListener("scroll", () => {
     } else {
         navW.classList.remove("translate-y-[-25px]", "opacity-0");
         navR.classList.add("translate-y-[-25px]", "opacity-0", "pointer-events-none");
+        navPage.classList.toggle("backdrop-blur-[6px]");
     }
 });
