@@ -41,9 +41,9 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
         // Hide Transition
         navW.classList.add("translate-y-[-25px]", "opacity-0");
-        navR.classList.remove("translate-y-[-25px]", "opacity-0");
+        navR.classList.remove("translate-y-[-25px]", "opacity-0", "pointer-events-none");
     } else {
         navW.classList.remove("translate-y-[-25px]", "opacity-0");
-        navR.classList.add("translate-y-[-25px]", "opacity-0");
+        navR.classList.add("translate-y-[-25px]", "opacity-0", "pointer-events-none");
     }
 });
